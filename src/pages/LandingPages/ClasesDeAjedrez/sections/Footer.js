@@ -39,13 +39,13 @@ function Footer() {
               MarketPlace
             </MKTypography>
             <MKTypography variant="button" opacity={0.8}>
-              Copyright © <script>document.write(new Date().getFullYear())</script>2023 Design by
-              Nadia Bejarano & Patricia Azame
+              Copyright © <script>document.write(new Date().getFullYear())</script>2021 Material
+              Design by Creative Tim.
             </MKTypography>
           </Grid>
           <Grid item xs={12} lg={6} ml="auto" textAlign={{ xs: "center", lg: "right" }}>
             <MKTypography variant="body1" fontWeight="bold" mb={6} sx={{ fontSize: "1.125rem" }}>
-              La inversión en conocimiento siempre paga el mejor interés - Benjamin Franklin.
+              La inversión en conocimiento siempre paga el mejor interés. - Benjamin Franklin
             </MKTypography>
             <MKTypography
               component={Link}

@@ -38,6 +38,7 @@ import footerRoutes from "footer.routes";
 
 // Images
 import Blog1 from "assets/images/examples/Blog1.jpg";
+import Comentario from "./sections/Comentario";
 
 function Presentation() {
   return (
@@ -102,6 +103,7 @@ function Presentation() {
         }}
       >
         <Information />
+        <Comentario />
         <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>

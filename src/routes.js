@@ -48,16 +48,10 @@ import Author from "layouts/pages/landing-pages/author";
 import Login2 from "layouts/pages/landing-pages/login";
 
 // Sections
-import PageHeaders from "layouts/sections/page-sections/page-headers";
-import Features from "layouts/sections/page-sections/featuers";
-import Navbars from "layouts/sections/navigation/navbars";
-import NavTabs from "layouts/sections/navigation/nav-tabs";
-import Pagination from "layouts/sections/navigation/pagination";
 import Inputs from "layouts/sections/input-areas/inputs";
 import Forms from "layouts/sections/input-areas/forms";
 import Alerts from "layouts/sections/attention-catchers/alerts";
-import Modals from "layouts/sections/attention-catchers/modals";
-import TooltipsPopovers from "layouts/sections/attention-catchers/tooltips-popovers";
+import ClasesAjedrez from "pages/LandingPages/ClasesDeAjedrez";
 
 const routes = [
   {
@@ -166,8 +160,8 @@ const routes = [
           },
           {
             name: "Aprende Ajedrez",
-            route: "/pages/landing-pages/author",
-            component: <Author />,
+            route: "/pages/landing-pages/clases-de-ajedrez",
+            component: <ClasesAjedrez />,
           },
         ],
       },
@@ -183,36 +177,46 @@ const routes = [
         dropdown: true,
         collapse: [
           {
-            name: "page headers",
-            route: "/sections/page-sections/page-headers",
-            component: <PageHeaders />,
-          },
-          {
-            name: "features",
-            route: "/sections/page-sections/features",
-            component: <Features />,
+            name: "Clases de Matemáticas",
+            route: "/pages/landing-pages/about-us",
+            component: <AboutUs />,
           },
         ],
       },
       {
         name: "Clases Individuales",
-        description: "See all navigations",
+        description: "Acomoda las clases a tu ritmo de estudio",
         dropdown: true,
         collapse: [
           {
-            name: "navbars",
-            route: "/sections/navigation/navbars",
-            component: <Navbars />,
+            name: "Clases De Canto",
+            route: "/pages/landing-pages/about-us",
+            component: <AboutUs />,
           },
           {
-            name: "nav tabs",
-            route: "/sections/navigation/nav-tabs",
-            component: <NavTabs />,
+            name: "Clases De Guitarra",
+            route: "/pages/landing-pages/contact-us",
+            component: <ContactUs />,
           },
           {
-            name: "pagination",
-            route: "/sections/navigation/pagination",
-            component: <Pagination />,
+            name: "Clases De Trompeta",
+            route: "/pages/landing-pages/author",
+            component: <Author />,
+          },
+          {
+            name: "Clases De Frances",
+            route: "/pages/landing-pages/about-us",
+            component: <AboutUs />,
+          },
+          {
+            name: "Clases De Ingles",
+            route: "/pages/landing-pages/contact-us",
+            component: <ContactUs />,
+          },
+          {
+            name: "Clases De Portugués",
+            route: "/pages/landing-pages/author",
+            component: <Author />,
           },
         ],
       },
@@ -236,16 +240,11 @@ const routes = [
             route: "/sections/input-areas/inputs",
             component: <Inputs />,
           },
-          {
-            name: "forms",
-            route: "/sections/input-areas/forms",
-            component: <Forms />,
-          },
         ],
       },
       {
         name: "Califación",
-        description: "See all examples",
+        description: "Encuentra las clases con mejores reseñas",
         dropdown: true,
         collapse: [
           {
@@ -253,21 +252,11 @@ const routes = [
             route: "/sections/attention-catchers/alerts",
             component: <Alerts />,
           },
-          {
-            name: "modals",
-            route: "/sections/attention-catchers/modals",
-            component: <Modals />,
-          },
-          {
-            name: "tooltips & popovers",
-            route: "/sections/attention-catchers/tooltips-popovers",
-            component: <TooltipsPopovers />,
-          },
         ],
       },
       {
         name: "Categorías",
-        description: "See all 32 examples",
+        description: "Encuentra todas las clases en un solo lugar",
         dropdown: true,
         collapse: [
           {
@@ -327,8 +316,8 @@ const routes = [
           },
           {
             name: "Aprende Ajedrez",
-            route: "/pages/landing-pages/author",
-            component: <Author />,
+            route: "/pages/landing-pages/clases-de-ajedrez",
+            component: <ClasesAjedrez />,
           },
         ],
       },
