@@ -23,11 +23,13 @@ import MKTypography from "components/MKTypography";
 
 // Material Kit 2 React components
 import TransparentBlogCard from "examples/Cards/BlogCards/TransparentBlogCard";
+import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
 
 // Images
 import post1 from "assets/images/examples/Blog1.jpg";
 import post2 from "assets/images/examples/educacion1.jpeg";
 import post3 from "assets/images/examples/educacion3.jpeg";
+import post4 from "assets/images/examples/educacion8.jpeg";
 
 function Places() {
   return (
@@ -74,6 +76,18 @@ function Places() {
                 type: "internal",
                 route: "/pages/blogs/author",
                 color: "info",
+                label: "read more",
+              }}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} lg={3}>
+            <BackgroundBlogCard
+              image={post4}
+              title="Opiniones"
+              description="Rather than worrying about switching offices every couple years, you stay in the same place."
+              action={{
+                type: "internal",
+                route: "/pages/blogs/author",
                 label: "read more",
               }}
             />

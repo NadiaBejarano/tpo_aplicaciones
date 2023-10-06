@@ -41,7 +41,7 @@ function Information() {
         >
           <MKTypography variant="h2">Opiniones</MKTypography>
           <MKTypography variant="h2" color="info" textGradient mb={2}>
-            Mas de 1000 alumnos ya tomaron clases con este profesor.
+            Conoce las opiniones sobre las clases.
           </MKTypography>
           <MKTypography variant="body1" color="text" mb={2}>
             Conoces algunas de sus opiniones sobre nuestros docentes e instructores.

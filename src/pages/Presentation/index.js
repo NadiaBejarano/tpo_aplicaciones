@@ -29,7 +29,6 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // Presentation page sections
 import Information from "pages/Presentation/sections/Information";
-import Testimonials from "pages/Presentation/sections/Testimonials";
 
 // Presentation page component
 
@@ -38,7 +37,7 @@ import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-presentation-3.jpg";
+import Blog1 from "assets/images/examples/Blog1.jpg";
 
 function Presentation() {
   return (
@@ -57,7 +56,7 @@ function Presentation() {
         minHeight="75vh"
         width="100%"
         sx={{
-          backgroundImage: `url(${bgImage})`,
+          backgroundImage: `url(${Blog1})`,
           backgroundSize: "cover",
           backgroundPosition: "top",
           display: "grid",
@@ -103,7 +102,6 @@ function Presentation() {
         }}
       >
         <Information />
-        <Testimonials />
         <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>
