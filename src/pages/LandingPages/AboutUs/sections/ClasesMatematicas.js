@@ -23,9 +23,9 @@ import MKAvatar from "components/MKAvatar";
 import MKTypography from "components/MKTypography";
 
 // Images
-import profilePicture from "assets/images/bruce-mars.jpg";
+import profilePicture from "assets/images/ivana-square.jpg";
 
-function Profile() {
+function ClasesMatematicas() {
   return (
     <MKBox component="section" py={{ xs: 6, sm: 12 }}>
       <Container>
@@ -36,7 +36,7 @@ function Profile() {
           <Grid container justifyContent="center" py={6}>
             <Grid item xs={12} md={7} mx={{ xs: "auto", sm: 6, md: 1 }}>
               <MKBox display="flex" justifyContent="space-between" alignItems="center" mb={1}>
-                <MKTypography variant="h3">Paola </MKTypography>
+                <MKTypography variant="h3"> Rodolfo Juarez </MKTypography>
               </MKBox>
               <Grid container spacing={3} mb={3}>
                 <Grid item>
@@ -46,8 +46,8 @@ function Profile() {
                 </Grid>
               </Grid>
               <MKTypography variant="body1" fontWeight="light" color="text">
-                Profesor de matematicas, con una solida formacion academica y experiencia laboral.
-                Mi compromiso con la excelencia educativa se refleja en mi enfoque innovador
+                Lic en matematicas, con una solida formacion academica y experiencia laboral. Mi
+                compromiso con la excelencia educativa se refleja en mi enfoque innovador
                 adaptabilidad y capacidad para fomentar un entorno de aprendizaje positivo.
                 <br />
               </MKTypography>
@@ -59,4 +59,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default ClasesMatematicas;
