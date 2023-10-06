@@ -38,7 +38,7 @@ import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-presentation.jpg";
+import bgImage from "assets/images/bg-presentation-3.jpg";
 
 function Presentation() {
   return (
@@ -46,9 +46,9 @@ function Presentation() {
       <DefaultNavbar
         routes={routes}
         action={{
-          type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          type: "internal",
+          route: "/pages/landing-pages/login",
+          label: "login",
           color: "info",
         }}
         sticky

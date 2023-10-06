@@ -45,6 +45,7 @@ import Icon from "@mui/material/Icon";
 import AboutUs from "layouts/pages/landing-pages/about-us";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Author from "layouts/pages/landing-pages/author";
+import Login2 from "layouts/pages/landing-pages/login";
 
 // Sections
 import PageHeaders from "layouts/sections/page-sections/page-headers";
@@ -89,6 +90,11 @@ const routes = [
             name: "Clases de Geografía",
             route: "/pages/landing-pages/author",
             component: <Author />,
+          },
+          {
+            name: "Clases de Login",
+            route: "/pages/landing-pages/login",
+            component: <Login2 />,
           },
         ],
       },

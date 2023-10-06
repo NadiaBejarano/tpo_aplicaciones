@@ -23,6 +23,11 @@ export default [
     route: "/pages/landing-pages/about-us",
   },
   {
+    image: `${imagesPrefix}/about-us.jpg`,
+    name: "Login Page",
+    route: "/pages/landing-pages/login",
+  },
+  {
     image: `${imagesPrefix}/contact.jpg`,
     name: "Contact Us Page",
     route: "/pages/landing-pages/contact-us",
