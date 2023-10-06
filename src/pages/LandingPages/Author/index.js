@@ -32,7 +32,7 @@ import Footer from "pages/LandingPages/Author/sections/Footer";
 import routes from "routes";
 
 // Images
-import bgImage from "assets/images/city-profile.jpg";
+import educacion6 from "assets/images/examples/educacion6.jpeg";
 
 function Author() {
   return (
@@ -40,9 +40,8 @@ function Author() {
       <DefaultNavbar
         routes={routes}
         action={{
-          type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          route: "layouts/pages/authentication/sign-in",
+          label: "Iniciar sesión",
           color: "info",
         }}
         transparent
@@ -57,7 +56,7 @@ function Author() {
               `${linearGradient(
                 rgba(gradients.dark.main, 0.8),
                 rgba(gradients.dark.state, 0.8)
-              )}, url(${bgImage})`,
+              )}, url(${educacion6})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             display: "grid",

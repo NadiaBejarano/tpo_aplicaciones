@@ -70,7 +70,7 @@ import Typography from "layouts/sections/elements/typography";
 const routes = [
   {
     name: "Tutorías",
-    icon: <Icon>book</Icon>,
+    icon: <Icon>biotech</Icon>,
     columns: 1,
     rowsPerColumn: 2,
     collapse: [
@@ -129,7 +129,7 @@ const routes = [
   },
   {
     name: "Clases de Música",
-    icon: <Icon>book</Icon>,
+    icon: <Icon>lyrics</Icon>,
     columns: 1,
     rowsPerColumn: 2,
     collapse: [
@@ -156,7 +156,7 @@ const routes = [
   },
   {
     name: "Cursos Cortos",
-    icon: <Icon>book</Icon>,
+    icon: <Icon>computer</Icon>,
     columns: 1,
     rowsPerColumn: 2,
     collapse: [

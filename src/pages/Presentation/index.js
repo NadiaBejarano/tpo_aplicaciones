@@ -48,7 +48,7 @@ function Presentation() {
         action={{
           type: "internal",
           route: "/pages/landing-pages/login",
-          label: "login",
+          label: "Iniciar Sesión",
           color: "info",
         }}
         sticky
