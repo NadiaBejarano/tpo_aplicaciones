@@ -1,21 +1,3 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
-//import Card from "@mui/material/Card";
-
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 
@@ -25,14 +7,15 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 // Author page sections
 //import Profile from "pages/LandingPages/Author/sections/Profile";
 //import Posts from "pages/LandingPages/Author/sections/Posts";
-import Contact from "pages/LandingPages/Login2/sections/Contact";
+
+import InicioSesion from "pages/LandingPages/Login2/sections/InicioSesion";
 import Footer from "pages/LandingPages/Login2/sections/Footer";
 
 // Routes
 import routes from "routes";
 
 // Images
-import bgImage from "assets/images/city-profile.jpg";
+import educacion6 from "assets/images/examples/educacion6.jpeg";
 
 function Login2() {
   return (
@@ -56,14 +39,14 @@ function Login2() {
               `${linearGradient(
                 rgba(gradients.dark.main, 0.8),
                 rgba(gradients.dark.state, 0.8)
-              )}, url(${bgImage})`,
+              )}, url(${educacion6})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             display: "grid",
             placeItems: "center",
           }}
         />
-        <Contact />
+        <InicioSesion />
         <Footer />
       </MKBox>
     </>

@@ -46,7 +46,7 @@ function Profile() {
                 </Grid>
               </Grid>
               <MKTypography variant="body1" fontWeight="light" color="text">
-                Profesor de geofrafia, con una solida formacion academica y experiencia laboral. Mi
+                Profesor de geografía, con una solida formación académica y experiencia laboral. Mi
                 compromiso con la excelencia educativa se refleja en mi enfoque innovador
                 adaptabilidad y capacidad para fomentar un entorno de aprendizaje positivo.
                 <br />

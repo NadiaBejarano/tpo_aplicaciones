@@ -5,7 +5,7 @@ import MKBox from "components/MKBox";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // Author page sections
-import ClasesAjedrez from "./sections/ClasesAjedrez";
+import ClasesCanto from "./sections/ClasesCanto";
 import Posts from "pages/LandingPages/Author/sections/Posts";
 import Contact from "pages/LandingPages/Author/sections/Contact";
 import Testimonials from "pages/Presentation/sections/Testimonials";
@@ -17,7 +17,7 @@ import routes from "routes";
 // Images
 import educacion6 from "assets/images/examples/educacion6.jpeg";
 
-function ClasesDeAjedrez() {
+function ClasesDeCanto() {
   return (
     <>
       <DefaultNavbar
@@ -46,7 +46,7 @@ function ClasesDeAjedrez() {
             placeItems: "center",
           }}
         />
-        <ClasesAjedrez />
+        <ClasesCanto />
         <Posts />
         <Testimonials />
         <Contact />
@@ -56,4 +56,4 @@ function ClasesDeAjedrez() {
   );
 }
 
-export default ClasesDeAjedrez;
+export default ClasesDeCanto;

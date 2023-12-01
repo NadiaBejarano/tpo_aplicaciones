@@ -1,18 +1,3 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -25,7 +10,7 @@ import MKTypography from "components/MKTypography";
 // Images
 import profilePicture from "assets/images/ivan-square.jpg";
 
-function ClasesAjedrez() {
+function ClasesCanto() {
   return (
     <MKBox component="section" py={{ xs: 6, sm: 12 }}>
       <Container>
@@ -36,7 +21,7 @@ function ClasesAjedrez() {
           <Grid container justifyContent="center" py={6}>
             <Grid item xs={12} md={7} mx={{ xs: "auto", sm: 6, md: 1 }}>
               <MKBox display="flex" justifyContent="space-between" alignItems="center" mb={1}>
-                <MKTypography variant="h3">Jorge Perez </MKTypography>
+                <MKTypography variant="h3">Javier Aguirre </MKTypography>
               </MKBox>
               <Grid container spacing={3} mb={3}>
                 <Grid item>
@@ -46,8 +31,9 @@ function ClasesAjedrez() {
                 </Grid>
               </Grid>
               <MKTypography variant="body1" fontWeight="light" color="text">
-                Campeón nacional de ajedrez. Realizo esta hermosa disciplina desde mi niñez por lo
-                cual conozco a la perfección cada movimiento.
+                Profesor de canto, recibido en el conservatorio nacional. Aprender a tu propio ritmo
+                con horarios flexibles. Más alla de las lecciones, estamos aquí para apoyarte en tu
+                aprendizaje.
                 <br />
               </MKTypography>
             </Grid>
@@ -58,4 +44,4 @@ function ClasesAjedrez() {
   );
 }
 
-export default ClasesAjedrez;
+export default ClasesCanto;

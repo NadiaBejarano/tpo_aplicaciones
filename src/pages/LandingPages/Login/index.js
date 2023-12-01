@@ -30,8 +30,8 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 import routes from "routes";
 import footerRoutes from "footer.routes";
 
-// Image
-import bgImage from "assets/images/illustrations/illustration-reset.jpg";
+// Imag
+import educacion6 from "assets/images/examples/educacion6.jpeg";
 
 function Login() {
   return (
@@ -56,7 +56,7 @@ function Login() {
             borderRadius="lg"
             ml={2}
             mt={2}
-            sx={{ backgroundImage: `url(${bgImage})` }}
+            sx={{ backgroundImage: `url(${educacion6})` }}
           />
         </Grid>
         <Grid
@@ -120,7 +120,7 @@ function Login() {
                 </Grid>
                 <Grid container item justifyContent="center" xs={12} mt={5} mb={2}>
                   <MKButton type="submit" variant="gradient" color="info">
-                    Login
+                    Bienvenido
                   </MKButton>
                 </Grid>
               </MKBox>

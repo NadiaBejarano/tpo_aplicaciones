@@ -1,3 +1,5 @@
+// @mui material components
+
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 
@@ -5,7 +7,7 @@ import MKBox from "components/MKBox";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // Author page sections
-import ClasesAjedrez from "./sections/ClasesAjedrez";
+import ClasesPortugues from "./sections/ClasesPortugues";
 import Posts from "pages/LandingPages/Author/sections/Posts";
 import Contact from "pages/LandingPages/Author/sections/Contact";
 import Testimonials from "pages/Presentation/sections/Testimonials";
@@ -17,7 +19,7 @@ import routes from "routes";
 // Images
 import educacion6 from "assets/images/examples/educacion6.jpeg";
 
-function ClasesDeAjedrez() {
+function ClasesDePortugues() {
   return (
     <>
       <DefaultNavbar
@@ -46,7 +48,7 @@ function ClasesDeAjedrez() {
             placeItems: "center",
           }}
         />
-        <ClasesAjedrez />
+        <ClasesPortugues />
         <Posts />
         <Testimonials />
         <Contact />
@@ -56,4 +58,4 @@ function ClasesDeAjedrez() {
   );
 }
 
-export default ClasesDeAjedrez;
+export default ClasesDePortugues;

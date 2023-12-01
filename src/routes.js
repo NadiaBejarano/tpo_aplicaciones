@@ -1,41 +1,3 @@
-/**
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-/** 
-  All of the routes for the Material Kit 2 React are added here,
-  You can add a new route, customize the routes and delete the routes here.
-
-  Once you add a new route on this file it will be visible automatically on
-  the Navbar.
-
-  For adding a new route you can follow the existing routes in the routes array.
-  1. The `name` key is used for the name of the route on the Navbar.
-  2. The `icon` key is used for the icon of the route on the Navbar.
-  3. The `collapse` key is used for making a collapsible item on the Navbar that contains other routes
-  inside (nested routes), you need to pass the nested routes inside an array as a value for the `collapse` key.
-  4. The `route` key is used to store the route location which is used for the react router.
-  5. The `href` key is used to store the external links location.
-  6. The `component` key is used to store the component of its route.
-  7. The `dropdown` key is used to define that the item should open a dropdown for its collapse items .
-  8. The `description` key is used to define the description of
-          a route under its name.
-  9. The `columns` key is used to define that how the content should look inside the dropdown menu as columns,
-          you can set the columns amount based on this key.
-  10. The `rowsPerColumn` key is used to define that how many rows should be in a column.
-*/
-
 // @mui material components
 import Icon from "@mui/material/Icon";
 
@@ -45,15 +7,33 @@ import Icon from "@mui/material/Icon";
 import AboutUs from "layouts/pages/landing-pages/about-us";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Author from "layouts/pages/landing-pages/author";
-import Login2 from "layouts/pages/landing-pages/login";
+import Login from "layouts/pages/landing-pages/login";
 
 // Sections
-import Inputs from "layouts/sections/input-areas/inputs";
-import Forms from "layouts/sections/input-areas/forms";
-import Alerts from "layouts/sections/attention-catchers/alerts";
 import ClasesAjedrez from "pages/LandingPages/ClasesDeAjedrez";
-
+import ClaseFrances from "pages/LandingPages/ClasesDeFrances";
+import ClasesIngles from "pages/LandingPages/ClasesDeIngles/Index";
+import ClasesPortugues from "pages/LandingPages/ClasesDePortugues";
+import ClasesCanto from "pages/LandingPages/ClasesDeCanto";
+import ClasesGuitarra from "pages/LandingPages/ClasesDeGuitarra";
+import ClasesTrompeta from "pages/LandingPages/ClasesDeTrompeta";
+import FundamentosProgramacion from "pages/LandingPages/FundamentosEnProgramacio";
+import Formulario from "pages/LandingPages/Login2/CrearCuenta";
+import ClasesCocina from "pages/LandingPages/ClasesCocinaBasica";
 const routes = [
+  {
+    dropdown: true,
+    collapse: [
+      {
+        route: "/pages/landing-pages/login",
+        component: <Login />,
+      },
+      {
+        route: "/pages/landing-pages/login/crear-cuenta/formulario",
+        component: <Formulario />,
+      },
+    ],
+  },
   {
     name: "Tutorías",
     icon: <Icon>biotech</Icon>,
@@ -77,11 +57,6 @@ const routes = [
             route: "/pages/landing-pages/author",
             component: <Author />,
           },
-          {
-            name: "Clases de Login",
-            route: "/pages/landing-pages/login",
-            component: <Login2 />,
-          },
         ],
       },
     ],
@@ -96,18 +71,18 @@ const routes = [
         collapse: [
           {
             name: "Clases De Frances",
-            route: "/pages/landing-pages/about-us",
-            component: <AboutUs />,
+            route: "/pages/landing-pages/clase-frances",
+            component: <ClaseFrances />,
           },
           {
             name: "Clases De Ingles",
-            route: "/pages/landing-pages/contact-us",
-            component: <ContactUs />,
+            route: "/pages/landing-pages/clases-ingles",
+            component: <ClasesIngles />,
           },
           {
             name: "Clases De Portugués",
-            route: "/pages/landing-pages/author",
-            component: <Author />,
+            route: "/pages/landing-pages/clases-portugues",
+            component: <ClasesPortugues />,
           },
         ],
       },
@@ -123,18 +98,18 @@ const routes = [
         collapse: [
           {
             name: "Clases De Canto",
-            route: "/pages/landing-pages/about-us",
-            component: <AboutUs />,
+            route: "/pages/landing-pages/clases-canto",
+            component: <ClasesCanto />,
           },
           {
             name: "Clases De Guitarra",
-            route: "/pages/landing-pages/contact-us",
-            component: <ContactUs />,
+            route: "/pages/landing-pages/clases-guitarra",
+            component: <ClasesGuitarra />,
           },
           {
             name: "Clases De Trompeta",
-            route: "/pages/landing-pages/author",
-            component: <Author />,
+            route: "/pages/landing-pages/clases-trompeta",
+            component: <ClasesTrompeta />,
           },
         ],
       },
@@ -150,13 +125,13 @@ const routes = [
         collapse: [
           {
             name: "Fundamentos En Programación",
-            route: "/pages/landing-pages/about-us",
-            component: <AboutUs />,
+            route: "/pages/landing-pages/fundamentos-programacion",
+            component: <FundamentosProgramacion />,
           },
           {
             name: "Clases De Cocina Básica",
-            route: "/pages/landing-pages/contact-us",
-            component: <ContactUs />,
+            route: "/pages/landing-pages/clases-cocina",
+            component: <ClasesCocina />,
           },
           {
             name: "Aprende Ajedrez",
@@ -190,33 +165,33 @@ const routes = [
         collapse: [
           {
             name: "Clases De Canto",
-            route: "/pages/landing-pages/about-us",
-            component: <AboutUs />,
+            route: "/pages/landing-pages/clases-canto",
+            component: <ClasesCanto />,
           },
           {
             name: "Clases De Guitarra",
-            route: "/pages/landing-pages/contact-us",
-            component: <ContactUs />,
+            route: "/pages/landing-pages/clases-guitarra",
+            component: <ClasesGuitarra />,
           },
           {
             name: "Clases De Trompeta",
-            route: "/pages/landing-pages/author",
-            component: <Author />,
+            route: "/pages/landing-pages/clases-trompeta",
+            component: <ClasesTrompeta />,
           },
           {
             name: "Clases De Frances",
-            route: "/pages/landing-pages/about-us",
-            component: <AboutUs />,
+            route: "/pages/landing-pages/clase-frances",
+            component: <ClaseFrances />,
           },
           {
             name: "Clases De Ingles",
-            route: "/pages/landing-pages/contact-us",
-            component: <ContactUs />,
+            route: "/pages/landing-pages/clases-ingles",
+            component: <ClasesIngles />,
           },
           {
             name: "Clases De Portugués",
-            route: "/pages/landing-pages/author",
-            component: <Author />,
+            route: "/pages/landing-pages/clases-portugal",
+            component: <ClasesPortugues />,
           },
         ],
       },
@@ -226,19 +201,19 @@ const routes = [
         dropdown: true,
         collapse: [
           {
-            name: "Clase Única",
-            route: "/sections/input-areas/inputs",
-            component: <Inputs />,
+            name: "Clases De Frances",
+            route: "/pages/landing-pages/clase-frances",
+            component: <ClaseFrances />,
           },
           {
-            name: "Semanal",
-            route: "/sections/input-areas/forms",
-            component: <Forms />,
+            name: "Clases De Canto",
+            route: "/pages/landing-pages/clases-canto",
+            component: <ClasesCanto />,
           },
           {
-            name: "Mensual",
-            route: "/sections/input-areas/inputs",
-            component: <Inputs />,
+            name: "Aprende Ajedrez",
+            route: "/pages/landing-pages/clases-de-ajedrez",
+            component: <ClasesAjedrez />,
           },
         ],
       },
@@ -249,8 +224,8 @@ const routes = [
         collapse: [
           {
             name: "Mejor Calificadas",
-            route: "/sections/attention-catchers/alerts",
-            component: <Alerts />,
+            route: "/pages/landing-pages/clases-portugues",
+            component: <ClasesPortugues />,
           },
         ],
       },
@@ -276,23 +251,23 @@ const routes = [
           },
           {
             name: "Clases de Frances",
-            route: "/pages/landing-pages/about-us",
-            component: <AboutUs />,
+            route: "/pages/landing-pages/clase-frances",
+            component: <ClaseFrances />,
           },
           {
             name: "Clases de Ingles",
-            route: "/pages/landing-pages/contact-us",
-            component: <ContactUs />,
+            route: "/pages/landing-pages/clases-ingles",
+            component: <ClasesIngles />,
           },
           {
             name: "Clases de Portugués",
-            route: "/pages/landing-pages/author",
-            component: <Author />,
+            route: "/pages/landing-pages/clases-portugues",
+            component: <ClasesPortugues />,
           },
           {
             name: "Clases de Canto",
-            route: "/pages/landing-pages/about-us",
-            component: <AboutUs />,
+            route: "/pages/landing-pages/clases-canto",
+            component: <ClasesCanto />,
           },
           {
             name: "Clases de Guitarra",
@@ -301,18 +276,18 @@ const routes = [
           },
           {
             name: "Clases de Trompeta",
-            route: "/pages/landing-pages/author",
-            component: <Author />,
+            route: "/pages/landing-pages/clases-trompeta",
+            component: <ClasesTrompeta />,
           },
           {
             name: "Fundamentos En Programación",
-            route: "/pages/landing-pages/about-us",
-            component: <AboutUs />,
+            route: "/pages/landing-pages/fundamentos-programacion",
+            component: <FundamentosProgramacion />,
           },
           {
             name: "Clases De Cocina Básica",
-            route: "/pages/landing-pages/contact-us",
-            component: <ContactUs />,
+            route: "/pages/landing-pages/clases-cocina",
+            component: <ClasesCocina />,
           },
           {
             name: "Aprende Ajedrez",

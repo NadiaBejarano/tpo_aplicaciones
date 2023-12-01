@@ -29,7 +29,7 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // Presentation page sections
 import Information from "pages/Presentation/sections/Information";
-
+import Comentario from "./sections/Comentario";
 // Presentation page component
 
 // Routes
@@ -37,8 +37,7 @@ import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import Blog1 from "assets/images/examples/Blog1.jpg";
-import Comentario from "./sections/Comentario";
+import educacion1 from "assets/images/examples/educacion1.jpeg";
 
 function Presentation() {
   return (
@@ -57,7 +56,7 @@ function Presentation() {
         minHeight="75vh"
         width="100%"
         sx={{
-          backgroundImage: `url(${Blog1})`,
+          backgroundImage: `url(${educacion1})`,
           backgroundSize: "cover",
           backgroundPosition: "top",
           display: "grid",
