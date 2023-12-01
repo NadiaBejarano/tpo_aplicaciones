@@ -23,9 +23,9 @@ import MKAvatar from "components/MKAvatar";
 import MKTypography from "components/MKTypography";
 
 // Images
-import profilePicture from "assets/images/bruce-mars.jpg";
+import profilePicture from "assets/images/ivana-squares.jpg";
 
-function Profile() {
+function ClasesGuitarra() {
   return (
     <MKBox component="section" py={{ xs: 6, sm: 12 }}>
       <Container>
@@ -36,17 +36,18 @@ function Profile() {
           <Grid container justifyContent="center" py={6}>
             <Grid item xs={12} md={7} mx={{ xs: "auto", sm: 6, md: 1 }}>
               <MKBox display="flex" justifyContent="space-between" alignItems="center" mb={1}>
-                <MKTypography variant="h3">Jose Perez</MKTypography>
+                <MKTypography variant="h3">Sabrina Soler </MKTypography>
               </MKBox>
               <Grid container spacing={3} mb={3}>
                 <Grid item>
                   <MKTypography component="span" variant="body2" color="text">
-                    Following
+                    Responsable
                   </MKTypography>
                 </Grid>
               </Grid>
               <MKTypography variant="body1" fontWeight="light" color="text">
-                Descripción de las clases: Aprende matematicas de la manera mas facil y didactica.
+                Sumérgete en el encanto de las melodias con nuestras clases personalizadas. Desde
+                principiantes hasta avanzados, te guiamos con lecciones dinámicas y prácticas.
                 <br />
               </MKTypography>
             </Grid>
@@ -57,4 +58,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default ClasesGuitarra;

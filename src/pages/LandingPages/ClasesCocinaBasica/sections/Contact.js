@@ -24,7 +24,7 @@ import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
 // Images
-import bgImage from "assets/images/examples/blog2.jpg";
+import educacion12 from "assets/images/examples/educacion12.jpg";
 
 function Contact() {
   return (
@@ -54,7 +54,7 @@ function Contact() {
                     `${linearGradient(
                       rgba(gradients.dark.main, 0.8),
                       rgba(gradients.dark.state, 0.8)
-                    )}, url(${bgImage})`,
+                    )}, url(${educacion12})`,
                   backgroundSize: "cover",
                 }}
               >
@@ -67,20 +67,31 @@ function Contact() {
                 >
                   <MKBox py={6} pr={6} pl={{ xs: 6, sm: 12 }} my="auto">
                     <MKTypography variant="h3" color="white" mb={1}>
-                      Login
+                      Información de Contacto
+                    </MKTypography>
+                    <MKTypography variant="body2" color="white" opacity={0.8} mb={3}>
+                      Si estas interesado/a en tomar la clases, llena el siguiente formulario.
                     </MKTypography>
                   </MKBox>
                 </MKBox>
               </Grid>
               <Grid item xs={12} lg={7}>
                 <MKBox component="form" p={2} method="post">
+                  <MKBox px={3} py={{ xs: 2, sm: 6 }}>
+                    <MKTypography variant="h2" mb={1}>
+                      Contactanos
+                    </MKTypography>
+                    <MKTypography variant="body1" color="text" mb={2}>
+                      Ponte en contacto con el docente
+                    </MKTypography>
+                  </MKBox>
                   <MKBox pt={0.5} pb={3} px={3}>
                     <Grid container>
                       <Grid item xs={12} pr={1} mb={6}>
                         <MKInput
                           variant="standard"
-                          label="Email"
-                          placeholder="email"
+                          label="Nombre y Apellido"
+                          placeholder="Nombre y Apellido"
                           InputLabelProps={{ shrink: true }}
                           fullWidth
                         />
@@ -88,10 +99,21 @@ function Contact() {
                       <Grid item xs={12} pr={1} mb={6}>
                         <MKInput
                           variant="standard"
-                          label="Password"
-                          placeholder="password"
+                          label="Email"
+                          placeholder="Email"
                           InputLabelProps={{ shrink: true }}
                           fullWidth
+                        />
+                      </Grid>
+                      <Grid item xs={12} pr={1} mb={6}>
+                        <MKInput
+                          variant="standard"
+                          label="Escribir Mensaje"
+                          placeholder="Hola, mi nombre es..."
+                          InputLabelProps={{ shrink: true }}
+                          fullWidth
+                          multiline
+                          rows={6}
                         />
                       </Grid>
                     </Grid>
@@ -105,7 +127,7 @@ function Contact() {
                       ml="auto"
                     >
                       <MKButton variant="gradient" color="info">
-                        Ingresar
+                        Enviar Mensaje
                       </MKButton>
                     </Grid>
                   </MKBox>

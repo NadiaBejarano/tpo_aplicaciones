@@ -23,9 +23,9 @@ import MKAvatar from "components/MKAvatar";
 import MKTypography from "components/MKTypography";
 
 // Images
-import profilePicture from "assets/images/ivan-square.jpg";
+import profilePicture from "assets/images/ivana-squares.jpg";
 
-function ClasesAjedrez() {
+function ClasesCocina() {
   return (
     <MKBox component="section" py={{ xs: 6, sm: 12 }}>
       <Container>
@@ -36,7 +36,7 @@ function ClasesAjedrez() {
           <Grid container justifyContent="center" py={6}>
             <Grid item xs={12} md={7} mx={{ xs: "auto", sm: 6, md: 1 }}>
               <MKBox display="flex" justifyContent="space-between" alignItems="center" mb={1}>
-                <MKTypography variant="h3">Jorge Perez </MKTypography>
+                <MKTypography variant="h3">Norma Perez </MKTypography>
               </MKBox>
               <Grid container spacing={3} mb={3}>
                 <Grid item>
@@ -46,8 +46,9 @@ function ClasesAjedrez() {
                 </Grid>
               </Grid>
               <MKTypography variant="body1" fontWeight="light" color="text">
-                Campeón nacional de ajedrez. Realizo esta hermosa disciplina desde mi niñez por lo
-                cual conozco a la perfección cada movimiento.
+                Embárcate en un viaje culinario único con nuestras clases de cocina, diseñados para
+                todos. Descubre secretos, tecnicas y delicias gastronómicas en un ambiente divertido
+                y educativo.
                 <br />
               </MKTypography>
             </Grid>
@@ -58,4 +59,4 @@ function ClasesAjedrez() {
   );
 }
 
-export default ClasesAjedrez;
+export default ClasesCocina;

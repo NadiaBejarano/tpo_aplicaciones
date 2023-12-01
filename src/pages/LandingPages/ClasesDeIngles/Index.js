@@ -1,3 +1,20 @@
+/*
+=========================================================
+* Material Kit 2 React - v2.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+*/
+
+// @mui material components
+
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 
@@ -5,7 +22,7 @@ import MKBox from "components/MKBox";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // Author page sections
-import ClasesAjedrez from "./sections/ClasesAjedrez";
+import ClasesIngles from "./sections/ClasesIngles";
 import Posts from "pages/LandingPages/Author/sections/Posts";
 import Contact from "pages/LandingPages/Author/sections/Contact";
 import Testimonials from "pages/Presentation/sections/Testimonials";
@@ -17,7 +34,7 @@ import routes from "routes";
 // Images
 import educacion6 from "assets/images/examples/educacion6.jpeg";
 
-function ClasesDeAjedrez() {
+function ClasesDeIngles() {
   return (
     <>
       <DefaultNavbar
@@ -46,7 +63,7 @@ function ClasesDeAjedrez() {
             placeItems: "center",
           }}
         />
-        <ClasesAjedrez />
+        <ClasesIngles />
         <Posts />
         <Testimonials />
         <Contact />
@@ -56,4 +73,4 @@ function ClasesDeAjedrez() {
   );
 }
 
-export default ClasesDeAjedrez;
+export default ClasesDeIngles;

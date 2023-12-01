@@ -23,7 +23,7 @@ import MKAvatar from "components/MKAvatar";
 import MKTypography from "components/MKTypography";
 
 // Images
-import profilePicture from "assets/images/ivana-square.jpg";
+import profilePicture from "assets/images/ivan-square.jpg";
 
 function ClasesMatematicas() {
   return (
@@ -46,7 +46,7 @@ function ClasesMatematicas() {
                 </Grid>
               </Grid>
               <MKTypography variant="body1" fontWeight="light" color="text">
-                Lic en matematicas, con una solida formacion academica y experiencia laboral. Mi
+                Lic en matemáticas, con una solida formación académica y experiencia laboral. Mi
                 compromiso con la excelencia educativa se refleja en mi enfoque innovador
                 adaptabilidad y capacidad para fomentar un entorno de aprendizaje positivo.
                 <br />

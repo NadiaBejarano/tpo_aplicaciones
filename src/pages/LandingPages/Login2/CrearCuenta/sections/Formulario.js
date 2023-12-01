@@ -11,7 +11,7 @@ import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
-function FormSimple() {
+function Form() {
   const [checked, setChecked] = useState(true);
 
   const handleChecked = () => setChecked(!checked);
@@ -21,7 +21,7 @@ function FormSimple() {
       <Container>
         <Grid container item justifyContent="center" xs={10} lg={7} mx="auto" textAlign="center">
           <MKTypography variant="h3" mb={1}>
-            Contact Us
+            Crear Cuenta
           </MKTypography>
         </Grid>
         <Grid container item xs={12} lg={7} sx={{ mx: "auto" }}>
@@ -29,19 +29,22 @@ function FormSimple() {
             <MKBox p={3}>
               <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
-                  <MKInput variant="standard" label="First Name" fullWidth />
+                  <MKInput variant="standard" label="Nombre Completo" fullWidth />
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <MKInput variant="standard" label="Last Name" fullWidth />
+                  <MKInput variant="standard" label="Apellido" fullWidth />
                 </Grid>
                 <Grid item xs={12}>
-                  <MKInput variant="standard" type="email" label="Email Address" fullWidth />
+                  <MKInput variant="standard" type="email" label="Email" fullWidth />
                 </Grid>
                 <Grid item xs={12}>
-                  <MKInput variant="standard" label="Experiencia" multiline fullWidth rows={6} />
+                  <MKInput variant="standard" label="Certificados" multiline fullWidth rows={6} />
                 </Grid>
                 <Grid item xs={12}>
-                  <MKInput variant="standard" label="Titulos" multiline fullWidth rows={6} />
+                  <MKInput variant="standard" label="Certificados" multiline fullWidth rows={6} />
+                </Grid>
+                <Grid item xs={12}>
+                  <MKInput variant="standard" label="Certificados" multiline fullWidth rows={6} />
                 </Grid>
                 <Grid item xs={12} alignItems="center" ml={-1}>
                   <Switch checked={checked} onChange={handleChecked} />
@@ -53,7 +56,7 @@ function FormSimple() {
                     sx={{ cursor: "pointer", userSelect: "none" }}
                     onClick={handleChecked}
                   >
-                    &nbsp;&nbsp;I agree the&nbsp;
+                    &nbsp;&nbsp;Acepto&nbsp;
                   </MKTypography>
                   <MKTypography
                     component="a"
@@ -62,13 +65,13 @@ function FormSimple() {
                     fontWeight="regular"
                     color="dark"
                   >
-                    Terms and Conditions
+                    Términos and Condiciones
                   </MKTypography>
                 </Grid>
               </Grid>
               <Grid container item justifyContent="center" xs={12} my={2}>
                 <MKButton type="submit" variant="gradient" color="dark" fullWidth>
-                  Send Message
+                  Enviar
                 </MKButton>
               </Grid>
             </MKBox>
@@ -79,4 +82,4 @@ function FormSimple() {
   );
 }
 
-export default FormSimple;
+export default Form;

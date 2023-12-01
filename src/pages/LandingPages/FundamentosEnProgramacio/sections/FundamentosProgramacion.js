@@ -25,7 +25,7 @@ import MKTypography from "components/MKTypography";
 // Images
 import profilePicture from "assets/images/ivan-square.jpg";
 
-function ClasesAjedrez() {
+function FundamentosProgramacion() {
   return (
     <MKBox component="section" py={{ xs: 6, sm: 12 }}>
       <Container>
@@ -36,7 +36,7 @@ function ClasesAjedrez() {
           <Grid container justifyContent="center" py={6}>
             <Grid item xs={12} md={7} mx={{ xs: "auto", sm: 6, md: 1 }}>
               <MKBox display="flex" justifyContent="space-between" alignItems="center" mb={1}>
-                <MKTypography variant="h3">Jorge Perez </MKTypography>
+                <MKTypography variant="h3"> Gonzalo Jerez </MKTypography>
               </MKBox>
               <Grid container spacing={3} mb={3}>
                 <Grid item>
@@ -46,8 +46,8 @@ function ClasesAjedrez() {
                 </Grid>
               </Grid>
               <MKTypography variant="body1" fontWeight="light" color="text">
-                Campeón nacional de ajedrez. Realizo esta hermosa disciplina desde mi niñez por lo
-                cual conozco a la perfección cada movimiento.
+                Técnico en programacion de Software, con una solida formación académica y
+                experiencia laboral en diversas empresas del mundo tech.
                 <br />
               </MKTypography>
             </Grid>
@@ -58,4 +58,4 @@ function ClasesAjedrez() {
   );
 }
 
-export default ClasesAjedrez;
+export default FundamentosProgramacion;
