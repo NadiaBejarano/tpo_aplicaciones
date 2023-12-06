@@ -18,22 +18,11 @@ import ClasesCanto from "pages/LandingPages/ClasesDeCanto";
 import ClasesGuitarra from "pages/LandingPages/ClasesDeGuitarra";
 import ClasesTrompeta from "pages/LandingPages/ClasesDeTrompeta";
 import FundamentosProgramacion from "pages/LandingPages/FundamentosEnProgramacio";
-import Formulario from "pages/LandingPages/Login2/CrearCuenta";
+import CrearCuenta from "pages/LandingPages/CrearCuenta";
 import ClasesCocina from "pages/LandingPages/ClasesCocinaBasica";
+import CrearServicio from "pages/LandingPages/CrearServicio";
+import MensajeDeError from "pages/LandingPages/MensajeDeError";
 const routes = [
-  {
-    dropdown: true,
-    collapse: [
-      {
-        route: "/pages/landing-pages/login",
-        component: <Login />,
-      },
-      {
-        route: "/pages/landing-pages/login/crear-cuenta/formulario",
-        component: <Formulario />,
-      },
-    ],
-  },
   {
     name: "Tutorías",
     icon: <Icon>biotech</Icon>,
@@ -295,6 +284,38 @@ const routes = [
             component: <ClasesAjedrez />,
           },
         ],
+      },
+    ],
+  },
+  {
+    collapse: [
+      {
+        route: "/pages/landing-pages/login",
+        component: <Login />,
+      },
+    ],
+  },
+  {
+    collapse: [
+      {
+        route: "/pages/landing-pages/crear-cuenta",
+        component: <CrearCuenta />,
+      },
+    ],
+  },
+  {
+    collapse: [
+      {
+        route: "/pages/landing-pages/crear-servicio",
+        component: <CrearServicio />,
+      },
+    ],
+  },
+  {
+    collapse: [
+      {
+        route: "/pages/landing-pages/mensaje-de-error",
+        component: <MensajeDeError />,
       },
     ],
   },

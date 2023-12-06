@@ -105,6 +105,21 @@ function SignInBasic() {
                   </MKBox>
                   <MKBox mt={3} mb={1} textAlign="center">
                     <MKTypography variant="button" color="text">
+                      ¿Olvidaste tu contraseña?{" "}
+                      <MKTypography
+                        component={Link}
+                        to="/pages/landing-pages/login"
+                        variant="button"
+                        color="info"
+                        fontWeight="medium"
+                        textGradient
+                      >
+                        Presiona aquí
+                      </MKTypography>
+                    </MKTypography>
+                  </MKBox>
+                  <MKBox mt={3} mb={1} textAlign="center">
+                    <MKTypography variant="button" color="text">
                       ¿No tienes una cuenta?{" "}
                       <MKTypography
                         component={Link}

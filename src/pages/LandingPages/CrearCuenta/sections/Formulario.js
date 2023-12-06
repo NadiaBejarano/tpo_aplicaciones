@@ -38,13 +38,19 @@ function Form() {
                   <MKInput variant="standard" type="email" label="Email" fullWidth />
                 </Grid>
                 <Grid item xs={12}>
-                  <MKInput variant="standard" label="Certificados" multiline fullWidth rows={6} />
+                  <MKInput variant="standard" type="celular" label="Celular" fullWidth />
+                </Grid>
+                <Grid item xs={12}>
+                  <MKInput variant="standard" type="contraseña" label="Contraseña" fullWidth />
+                </Grid>
+                <Grid item xs={12}>
+                  <MKInput variant="standard" type="con" label="Confirmar contraseña" fullWidth />
                 </Grid>
                 <Grid item xs={12}>
                   <MKInput variant="standard" label="Certificados" multiline fullWidth rows={6} />
                 </Grid>
                 <Grid item xs={12}>
-                  <MKInput variant="standard" label="Certificados" multiline fullWidth rows={6} />
+                  <MKInput variant="standard" label="Experiencia" multiline fullWidth rows={6} />
                 </Grid>
                 <Grid item xs={12} alignItems="center" ml={-1}>
                   <Switch checked={checked} onChange={handleChecked} />
