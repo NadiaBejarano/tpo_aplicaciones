@@ -8,8 +8,8 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 //import Profile from "pages/LandingPages/Author/sections/Profile";
 //import Posts from "pages/LandingPages/Author/sections/Posts";
 
-import InicioSesion from "pages/LandingPages/Login2/sections/InicioSesion";
-import Footer from "pages/LandingPages/Login2/sections/Footer";
+import Formulario from "./sections/Formulario";
+import Footer from "./sections/Footer";
 
 // Routes
 import routes from "routes";
@@ -17,14 +17,14 @@ import routes from "routes";
 // Images
 import educacion6 from "assets/images/examples/educacion6.jpeg";
 
-function Login2() {
+function CrearCuenta() {
   return (
     <>
       <DefaultNavbar
         routes={routes}
         action={{
           type: "internal",
-          route: "/pages/landing-pages/login",
+          route: "/pages/landing-pages/login/crear-cuenta",
           label: "",
           color: "info",
         }}
@@ -46,11 +46,11 @@ function Login2() {
             placeItems: "center",
           }}
         />
-        <InicioSesion />
+        <Formulario />
         <Footer />
       </MKBox>
     </>
   );
 }
 
-export default Login2;
+export default CrearCuenta;

@@ -8,8 +8,7 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 //import Profile from "pages/LandingPages/Author/sections/Profile";
 //import Posts from "pages/LandingPages/Author/sections/Posts";
 
-import Formulario from "./sections/Formulario";
-import Footer from "pages/LandingPages/Login2/sections/Footer";
+import SimpleAlerts from "./sections/MensajeError";
 
 // Routes
 import routes from "routes";
@@ -17,15 +16,15 @@ import routes from "routes";
 // Images
 import educacion6 from "assets/images/examples/educacion6.jpeg";
 
-function CrearCuenta() {
+function MensajeDeError() {
   return (
     <>
       <DefaultNavbar
         routes={routes}
         action={{
           type: "internal",
-          route: "/pages/landing-pages/login/crear-cuenta",
-          label: "login",
+          route: "/pages/landing-pages/login/mensaje-de-error",
+          label: "",
           color: "info",
         }}
         sticky
@@ -46,11 +45,10 @@ function CrearCuenta() {
             placeItems: "center",
           }}
         />
-        <Formulario />
-        <Footer />
+        <SimpleAlerts />
       </MKBox>
     </>
   );
 }
 
-export default CrearCuenta;
+export default MensajeDeError;
