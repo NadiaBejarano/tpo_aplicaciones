@@ -27,8 +27,7 @@ import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
 // Images
-import bgFront from "assets/images/rotating-card-bg-front.jpeg";
-import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+import educacion6 from "assets/images/examples/educacion6.jpeg";
 
 function Information() {
   return (
@@ -38,7 +37,7 @@ function Information() {
           <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
             <RotatingCard>
               <RotatingCardFront
-                image={bgFront}
+                image={educacion6}
                 icon="touch_app"
                 title={
                   <>
@@ -46,12 +45,13 @@ function Information() {
                     <br />A tu alcance
                   </>
                 }
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                description="Aprende desde cualquier lugar de Argentina"
               />
               <RotatingCardBack
-                image={bgBack}
+                image={educacion6}
                 title=""
-                description=" Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                description=" Clases 100% online
+                ."
               />
             </RotatingCard>
           </Grid>
@@ -60,13 +60,13 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   title="Clases grupales o individuales"
-                  description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi."
+                  description=" Las clases grupales están diseñadas para que compartas con otros alumnos con intereses y objetivos similares a los tuyos. Mientras que las clases individuales se adaptan a tus requerimientos académicos."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   title="Clases 100% on line"
-                  description=" Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+                  description=" Las clases son 100% online y remotas, podes tomarlas sin que te muevas de tu casa."
                 />
               </Grid>
             </Grid>
@@ -74,13 +74,13 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   title="Frecuencia unica, semanal o mensual"
-                  description=" Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                  description=" Podes elegir tus clases con la frecuencia acorde a tus tiempos y requerimientos. Podes optar por clases una vez a la semana, una vez al mes, o por clases únicas."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   title="Servicios especiales"
-                  description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  description=" También contamos con servicios para cuidados de niños, clases de música, idiomas y mucho mas."
                 />
               </Grid>
             </Grid>

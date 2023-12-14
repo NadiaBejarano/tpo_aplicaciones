@@ -14,8 +14,8 @@ Coded by www.creative-tim.com
 */
 
 // Material Kit 2 React pages
-import Login2 from "pages/LandingPages/Login2";
+import Login from "pages/LandingPages/Login";
 
 export default function LoginPage() {
-  return <Login2 />;
+  return <Login />;
 }
