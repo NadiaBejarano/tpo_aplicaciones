@@ -17,7 +17,7 @@ import Footer from "pages/LandingPages/Author/sections/Footer";
 import routes from "routes";
 
 // Images
-import educacion6 from "assets/images/examples/educacion6.jpeg";
+import educacion28 from "assets/images/examples/educacion28.jpeg";
 
 function ClasesCocinaBasica() {
   return (
@@ -41,7 +41,7 @@ function ClasesCocinaBasica() {
               `${linearGradient(
                 rgba(gradients.dark.main, 0.8),
                 rgba(gradients.dark.state, 0.8)
-              )}, url(${educacion6})`,
+              )}, url(${educacion28})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             display: "grid",

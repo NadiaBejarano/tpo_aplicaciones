@@ -1,4 +1,4 @@
-/*
+/**
 =========================================================
 * Material Kit 2 React - v2.1.0
 =========================================================
@@ -13,29 +13,39 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+import { useState } from "react";
+
+// react-router-dom components
+import { Link } from "react-router-dom";
+
 // @mui material components
-//import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import Switch from "@mui/material/Switch";
+import Grid from "@mui/material/Grid";
+
+// @mui icons
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
-//import MKInput from "components/MKInput";
-//import MKButton from "components/MKButton";
-//import MKTypography from "components/MKTypography";
+import MKTypography from "components/MKTypography";
+import MKInput from "components/MKInput";
+import MKButton from "components/MKButton";
 
-// Material Kit 2 React examples
+// Material Kit 2 React example components
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import InicioSesion from "pages/LandingPages/Login2/sections/InicioSesion";
-import Footer from "pages/LandingPages/Login2/sections/Footer";
-//import DefaultFooter from "examples/Footers/DefaultFooter";
+import SimpleFooter from "examples/Footers/SimpleFooter";
 
-// Routes
+// Material Kit 2 React page layout routes
 import routes from "routes";
-//import footerRoutes from "footer.routes";
 
-// Imag
-import educacion6 from "assets/images/examples/educacion6.jpeg";
+// Images
+import educacion3 from "assets/images/examples/educacion3.jpeg";
 
-function Login() {
+function SignInBasic() {
+  const [rememberMe, setRememberMe] = useState(false);
+
+  const handleSetRememberMe = () => setRememberMe(!rememberMe);
+
   return (
     <>
       <DefaultNavbar
@@ -43,31 +53,113 @@ function Login() {
         action={{
           type: "external",
           route: "/pages/landing-pages/login",
-          label: "",
-          color: "",
         }}
-        sticky
+        transparent
+        light
       />
-      <MKBox bgColor="white">
-        <MKBox
-          minHeight="6rem"
-          width="100%"
-          sx={{
-            backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-              `${linearGradient(
-                rgba(gradients.dark.main, 0.8),
-                rgba(gradients.dark.state, 0.8)
-              )}, url(${educacion6})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            display: "grid",
-            placeItems: "center",
-          }}
-        />
-        <InicioSesion />
-        <Footer />
+      <MKBox
+        position="absolute"
+        top={0}
+        left={0}
+        zIndex={1}
+        width="100%"
+        minHeight="100vh"
+        sx={{
+          backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
+            `${linearGradient(
+              rgba(gradients.dark.main, 0.6),
+              rgba(gradients.dark.state, 0.6)
+            )}, url(${educacion3})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      <MKBox px={1} width="100%" height="100vh" mx="auto" position="relative" zIndex={2}>
+        <Grid container spacing={1} justifyContent="center" alignItems="center" height="100%">
+          <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>
+            <Card>
+              <MKBox
+                variant="gradient"
+                bgColor="info"
+                borderRadius="lg"
+                coloredShadow="info"
+                mx={2}
+                mt={-3}
+                p={2}
+                mb={1}
+                textAlign="center"
+              >
+                <MKTypography variant="h4" fontWeight="medium" color="white" mt={1}>
+                  Bienvenido
+                </MKTypography>
+              </MKBox>
+              <MKBox pt={4} pb={3} px={3}>
+                <MKBox component="form" role="form">
+                  <MKBox mb={2}>
+                    <MKInput type="email" label="Email" fullWidth />
+                  </MKBox>
+                  <MKBox mb={2}>
+                    <MKInput type="password" label="Contraseña" fullWidth />
+                  </MKBox>
+                  <MKBox display="flex" alignItems="center" ml={-1}>
+                    <Switch checked={rememberMe} onChange={handleSetRememberMe} />
+                    <MKTypography
+                      variant="button"
+                      fontWeight="regular"
+                      color="text"
+                      onClick={handleSetRememberMe}
+                      sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
+                    >
+                      &nbsp;&nbsp;Recuerdame
+                    </MKTypography>
+                  </MKBox>
+                  <MKBox mt={4} mb={1}>
+                    <MKButton variant="gradient" color="info" fullWidth>
+                      Iniciar sesion
+                    </MKButton>
+                  </MKBox>
+                  <MKBox mt={3} mb={1} textAlign="center">
+                    <MKTypography variant="button" color="text">
+                      Olvidaste tu contraseña?{" "}
+                      <MKTypography
+                        component={Link}
+                        to="/authentication/sign-up/cover"
+                        variant="button"
+                        color="info"
+                        fontWeight="medium"
+                        textGradient
+                      >
+                        Recuperar
+                      </MKTypography>
+                    </MKTypography>
+                  </MKBox>
+                  <MKBox mt={3} mb={1} textAlign="center">
+                    <MKTypography variant="button" color="text">
+                      No tienes cuenta?{" "}
+                      <MKTypography
+                        component={Link}
+                        to="/authentication/sign-up/cover"
+                        variant="button"
+                        color="info"
+                        fontWeight="medium"
+                        textGradient
+                      >
+                        Crear cuenta
+                      </MKTypography>
+                    </MKTypography>
+                  </MKBox>
+                </MKBox>
+              </MKBox>
+            </Card>
+          </Grid>
+        </Grid>
+      </MKBox>
+      <MKBox width="100%" position="absolute" zIndex={2} bottom="1.625rem">
+        <SimpleFooter light />
       </MKBox>
     </>
   );
 }
-export default Login;
+
+export default SignInBasic;

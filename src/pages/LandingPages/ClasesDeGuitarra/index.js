@@ -17,7 +17,7 @@ import Footer from "pages/LandingPages/Author/sections/Footer";
 import routes from "routes";
 
 // Images
-import educacion6 from "assets/images/examples/educacion6.jpeg";
+import educacion25 from "assets/images/examples/educacion25.jpeg";
 
 function ClasesDeGuitarra() {
   return (
@@ -41,7 +41,7 @@ function ClasesDeGuitarra() {
               `${linearGradient(
                 rgba(gradients.dark.main, 0.8),
                 rgba(gradients.dark.state, 0.8)
-              )}, url(${educacion6})`,
+              )}, url(${educacion25})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             display: "grid",

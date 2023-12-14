@@ -15,7 +15,7 @@ import Footer from "pages/LandingPages/Author/sections/Footer";
 import routes from "routes";
 
 // Images
-import educacion6 from "assets/images/examples/educacion6.jpeg";
+import educacion29 from "assets/images/examples/educacion29.jpeg";
 
 function ClasesDeAjedrez() {
   return (
@@ -39,7 +39,7 @@ function ClasesDeAjedrez() {
               `${linearGradient(
                 rgba(gradients.dark.main, 0.8),
                 rgba(gradients.dark.state, 0.8)
-              )}, url(${educacion6})`,
+              )}, url(${educacion29})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             display: "grid",

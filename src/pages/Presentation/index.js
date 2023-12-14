@@ -37,7 +37,7 @@ import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import educacion1 from "assets/images/examples/educacion1.jpeg";
+import educacion16 from "assets/images/examples/educacion16.jpeg";
 
 function Presentation() {
   return (
@@ -56,7 +56,7 @@ function Presentation() {
         minHeight="75vh"
         width="100%"
         sx={{
-          backgroundImage: `url(${educacion1})`,
+          backgroundImage: `url(${educacion16})`,
           backgroundSize: "cover",
           backgroundPosition: "top",
           display: "grid",
