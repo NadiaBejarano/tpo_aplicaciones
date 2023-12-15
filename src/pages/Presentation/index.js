@@ -29,7 +29,7 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // Presentation page sections
 import Information from "pages/Presentation/sections/Information";
-import Comentario from "./sections/Comentario";
+
 // Presentation page component
 
 // Routes
@@ -102,7 +102,6 @@ function Presentation() {
         }}
       >
         <Information />
-        <Comentario />
         <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Switch from "@mui/material/Switch";
+import { Rating } from "@mui/material";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -39,6 +40,9 @@ function Comentario() {
                 </Grid>
                 <Grid item xs={12}>
                   <MKInput variant="standard" label="Tu mensaje" multiline fullWidth rows={6} />
+                </Grid>
+                <Grid item xs={12}>
+                  <Rating />
                 </Grid>
                 <Grid item xs={12} alignItems="center" ml={-1}>
                   <Switch checked={checked} onChange={handleChecked} />

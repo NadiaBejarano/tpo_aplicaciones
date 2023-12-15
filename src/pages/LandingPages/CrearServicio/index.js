@@ -24,7 +24,7 @@ function CrearServicio() {
         routes={routes}
         action={{
           type: "internal",
-          route: "/pages/landing-pages/login/crear-servicio",
+          route: "/pages/landing-pages/crear-servicio",
           label: "",
           color: "info",
         }}

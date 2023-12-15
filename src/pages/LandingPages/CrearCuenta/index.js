@@ -24,7 +24,7 @@ function CrearCuenta() {
         routes={routes}
         action={{
           type: "internal",
-          route: "/pages/landing-pages/login/crear-cuenta",
+          route: "/pages/landing-pages/crear-cuenta",
           label: "",
           color: "info",
         }}

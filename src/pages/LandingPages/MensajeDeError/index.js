@@ -23,7 +23,7 @@ function MensajeDeError() {
         routes={routes}
         action={{
           type: "internal",
-          route: "/pages/landing-pages/login/mensaje-de-error",
+          route: "/pages/landing-pages/mensaje-de-error",
           label: "",
           color: "info",
         }}
