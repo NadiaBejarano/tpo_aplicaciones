@@ -13,14 +13,14 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+// import { useState } from "react";
 
 // react-router-dom components
 import { Link } from "react-router-dom";
 
 // @mui material components
 import Card from "@mui/material/Card";
-import Switch from "@mui/material/Switch";
+// import Switch from "@mui/material/Switch";
 import Grid from "@mui/material/Grid";
 
 // @mui icons
@@ -37,14 +37,74 @@ import SimpleFooter from "examples/Footers/SimpleFooter";
 
 // Material Kit 2 React page layout routes
 import routes from "routes";
+import api from "api/api";
 
 // Images
 import educacion3 from "assets/images/examples/educacion3.jpeg";
 
 function SignInBasic() {
-  const [rememberMe, setRememberMe] = useState(false);
+  const handleForget = async () => {
+    try {
+      const email = "patricianazame@gmail.com"; // Puedes obtener el email de tu estado o de algún otro lugar
+      const data = await api.recuperarPassword(email);
 
-  const handleSetRememberMe = () => setRememberMe(!rememberMe);
+      // Lógica después de una solicitud exitosa
+      console.log("Respuesta del servidor para recuperar contraseña:", data);
+    } catch (error) {
+      // Manejo de errores
+      console.error("Error al recuperar contraseña:", error.message);
+    }
+  };
+
+  const handleResetPassword = async () => {
+    try {
+      const token =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTZkMjNlZjdiYzRiMWEzNDlmN2QwY2IiLCJpYXQiOjE3MDE2NjA4MjEsImV4cCI6MTcwMTY2NDQyMX0.Bma52HgiCpgypHyoxEKspsF2ztspFhzDbd-nFeygYnE";
+      // Debes obtener el token de alguna manera
+      const newPassword = "654321"; // Debes obtener la nueva contraseña de alguna manera
+
+      const data = await api.resetearPassword(token, newPassword);
+
+      // Lógica después de una solicitud exitosa
+      console.log("Respuesta del servidor para resetear contraseña:", data);
+    } catch (error) {
+      // Manejo de errores
+      console.error("Error al resetear contraseña:", error.message);
+    }
+  };
+
+  const handleLogin = async () => {
+    console.log("Se hizo clic en el botón");
+
+    try {
+      const data = await api.login("patricianazame@gmail.com", "654321");
+      console.log("Respuesta del servidor:", data);
+      // Almacenar el token en localStorage
+      localStorage.setItem("token", data.token);
+    } catch (error) {
+      console.error("Error:", error.message);
+      // Manejo de errores
+    }
+  };
+  const handleRegister = async () => {
+    try {
+      const usuarioData = {
+        email: "patricianazame2@gmail.com",
+        password: "123456",
+        nombre: "Patricia",
+        apellido: "Azame",
+        titulo: "Profesora de Cocina",
+      };
+
+      const data = await api.registrarUsuario(usuarioData);
+
+      // Lógica después de una solicitud exitosa
+      console.log("Respuesta del servidor para registro de usuario:", data);
+    } catch (error) {
+      // Manejo de errores
+      console.error("Error al registrar usuario:", error.message);
+    }
+  };
 
   return (
     <>
@@ -102,22 +162,26 @@ function SignInBasic() {
                   <MKBox mb={2}>
                     <MKInput type="password" label="Contraseña" fullWidth />
                   </MKBox>
-                  <MKBox display="flex" alignItems="center" ml={-1}>
-                    <Switch checked={rememberMe} onChange={handleSetRememberMe} />
-                    <MKTypography
-                      variant="button"
-                      fontWeight="regular"
-                      color="text"
-                      onClick={handleSetRememberMe}
-                      sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
-                    >
-                      &nbsp;&nbsp;Recuerdame
-                    </MKTypography>
-                  </MKBox>
                   <MKBox mt={4} mb={1}>
-                    <MKButton variant="gradient" color="info" fullWidth>
+                    <MKButton variant="gradient" color="info" fullWidth onClick={handleLogin}>
                       Iniciar sesion
                     </MKButton>
+                  </MKBox>
+                  <MKBox mt={3} mb={1} textAlign="center">
+                    <MKTypography variant="button" color="text">
+                      Falta formulario de Reset Password{" "}
+                      <MKTypography
+                        component={Link}
+                        to="/authentication/sign-up/cover"
+                        variant="button"
+                        color="info"
+                        fontWeight="medium"
+                        textGradient
+                        onClick={handleResetPassword}
+                      >
+                        Reset
+                      </MKTypography>
+                    </MKTypography>
                   </MKBox>
                   <MKBox mt={3} mb={1} textAlign="center">
                     <MKTypography variant="button" color="text">
@@ -129,6 +193,7 @@ function SignInBasic() {
                         color="info"
                         fontWeight="medium"
                         textGradient
+                        onClick={handleForget}
                       >
                         Recuperar
                       </MKTypography>
@@ -136,7 +201,7 @@ function SignInBasic() {
                   </MKBox>
                   <MKBox mt={3} mb={1} textAlign="center">
                     <MKTypography variant="button" color="text">
-                      No tienes cuenta?{" "}
+                      No encuentro el formulario de cuenta?{" "}
                       <MKTypography
                         component={Link}
                         to="/authentication/sign-up/cover"
@@ -144,8 +209,9 @@ function SignInBasic() {
                         color="info"
                         fontWeight="medium"
                         textGradient
+                        onClick={handleRegister}
                       >
-                        Crear cuenta
+                        Crear cuenta Default
                       </MKTypography>
                     </MKTypography>
                   </MKBox>
