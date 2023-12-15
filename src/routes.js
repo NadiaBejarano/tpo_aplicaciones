@@ -22,115 +22,10 @@ import CrearCuenta from "pages/LandingPages/CrearCuenta";
 import ClasesCocina from "pages/LandingPages/ClasesCocinaBasica";
 import CrearServicio from "pages/LandingPages/CrearServicio";
 import MensajeDeError from "pages/LandingPages/MensajeDeError";
+import Vista from "pages/LandingPages/VistaProfesor";
+import Mensaje from "pages/LandingPages/CambioDeEstado";
+import Opinion from "pages/LandingPages/Opiniones";
 const routes = [
-  {
-    name: "Tutorías",
-    icon: <Icon>biotech</Icon>,
-    columns: 1,
-    rowsPerColumn: 2,
-    collapse: [
-      {
-        collapse: [
-          {
-            name: "Clases de Matemáticas",
-            route: "/pages/landing-pages/about-us",
-            component: <AboutUs />,
-          },
-          {
-            name: "Clases de Lengua",
-            route: "/pages/landing-pages/contact-us",
-            component: <ContactUs />,
-          },
-          {
-            name: "Clases de Geografía",
-            route: "/pages/landing-pages/author",
-            component: <Author />,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    name: "Idiomas",
-    icon: <Icon>book</Icon>,
-    columns: 1,
-    rowsPerColumn: 2,
-    collapse: [
-      {
-        collapse: [
-          {
-            name: "Clases De Frances",
-            route: "/pages/landing-pages/clase-frances",
-            component: <ClaseFrances />,
-          },
-          {
-            name: "Clases De Ingles",
-            route: "/pages/landing-pages/clases-ingles",
-            component: <ClasesIngles />,
-          },
-          {
-            name: "Clases De Portugués",
-            route: "/pages/landing-pages/clases-portugues",
-            component: <ClasesPortugues />,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    name: "Clases de Música",
-    icon: <Icon>lyrics</Icon>,
-    columns: 1,
-    rowsPerColumn: 2,
-    collapse: [
-      {
-        collapse: [
-          {
-            name: "Clases De Canto",
-            route: "/pages/landing-pages/clases-canto",
-            component: <ClasesCanto />,
-          },
-          {
-            name: "Clases De Guitarra",
-            route: "/pages/landing-pages/clases-guitarra",
-            component: <ClasesGuitarra />,
-          },
-          {
-            name: "Clases De Trompeta",
-            route: "/pages/landing-pages/clases-trompeta",
-            component: <ClasesTrompeta />,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    name: "Cursos Cortos",
-    icon: <Icon>computer</Icon>,
-    columns: 1,
-    rowsPerColumn: 2,
-    collapse: [
-      {
-        collapse: [
-          {
-            name: "Fundamentos En Programación",
-            route: "/pages/landing-pages/fundamentos-programacion",
-            component: <FundamentosProgramacion />,
-          },
-          {
-            name: "Clases De Cocina Básica",
-            route: "/pages/landing-pages/clases-cocina",
-            component: <ClasesCocina />,
-          },
-          {
-            name: "Aprende Ajedrez",
-            route: "/pages/landing-pages/clases-de-ajedrez",
-            component: <ClasesAjedrez />,
-          },
-        ],
-      },
-    ],
-  },
   {
     name: "Búsqueda",
     icon: <Icon>search</Icon>,
@@ -298,24 +193,34 @@ const routes = [
   {
     collapse: [
       {
+        name: "Crear cuenta",
         route: "/pages/landing-pages/crear-cuenta",
         component: <CrearCuenta />,
       },
-    ],
-  },
-  {
-    collapse: [
       {
+        name: "Crear servicio",
         route: "/pages/landing-pages/crear-servicio",
         component: <CrearServicio />,
       },
-    ],
-  },
-  {
-    collapse: [
       {
+        name: "Mensaje error",
         route: "/pages/landing-pages/mensaje-de-error",
         component: <MensajeDeError />,
+      },
+      {
+        name: "Vista",
+        route: "/pages/landing-pages/vista-profesor",
+        component: <Vista />,
+      },
+      {
+        name: "Mensaje",
+        route: "/pages/landing-pages/mensaje",
+        component: <Mensaje />,
+      },
+      {
+        name: "Opinion",
+        route: "/pages/landing-pages/opinion",
+        component: <Opinion />,
       },
     ],
   },

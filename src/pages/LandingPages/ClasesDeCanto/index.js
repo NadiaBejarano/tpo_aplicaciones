@@ -9,6 +9,7 @@ import ClasesCanto from "./sections/ClasesCanto";
 import Posts from "pages/LandingPages/Author/sections/Posts";
 import Contact from "pages/LandingPages/Author/sections/Contact";
 import Testimonials from "pages/Presentation/sections/Testimonials";
+import Comentario from "pages/Presentation/sections/Comentario";
 import Footer from "pages/LandingPages/Author/sections/Footer";
 
 // Routes
@@ -49,6 +50,7 @@ function ClasesDeCanto() {
         <ClasesCanto />
         <Posts />
         <Testimonials />
+        <Comentario />
         <Contact />
         <Footer />
       </MKBox>

@@ -22,27 +22,24 @@ import MKBox from "components/MKBox";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // Author page sections
-import ClasesGeografia from "./sections/ClasesGeografia";
-import Posts from "pages/LandingPages/Author/sections/Posts";
-import Contact from "pages/LandingPages/Author/sections/Contact";
-import Testimonials from "pages/Presentation/sections/Testimonials";
-import Comentario from "pages/Presentation/sections/Comentario";
-import Footer from "pages/LandingPages/Author/sections/Footer";
+import Mensaje from "./sections/Mensaje";
+import DropdownAndDropup from "../Desplegable";
+import Footer from "../Author/sections/Footer";
 
 // Routes
 import routes from "routes";
 
 // Images
-import educacion18 from "assets/images/examples/educacion18.jpeg";
+import educacion20 from "assets/images/examples/educacion20.png";
 
-function ContactUs() {
+function CambioDeEstado() {
   return (
     <>
       <DefaultNavbar
         routes={routes}
         action={{
-          route: "layouts/pages/authentication/sign-in",
-          label: "Iniciar sesión",
+          route: "",
+          label: "Cerrar sesión",
           color: "info",
         }}
         transparent
@@ -57,22 +54,19 @@ function ContactUs() {
               `${linearGradient(
                 rgba(gradients.dark.main, 0.8),
                 rgba(gradients.dark.state, 0.8)
-              )}, url(${educacion18})`,
+              )}, url(${educacion20})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             display: "grid",
             placeItems: "center",
           }}
         />
-        <ClasesGeografia />
-        <Posts />
-        <Testimonials />
-        <Comentario />
-        <Contact />
+        <Mensaje />
+        <DropdownAndDropup />
         <Footer />
       </MKBox>
     </>
   );
 }
 
-export default ContactUs;
+export default CambioDeEstado;

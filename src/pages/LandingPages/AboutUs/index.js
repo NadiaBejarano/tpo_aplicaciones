@@ -10,6 +10,7 @@ import Posts from "pages/LandingPages/Author/sections/Posts";
 import Contact from "pages/LandingPages/Author/sections/Contact";
 import Testimonials from "pages/Presentation/sections/Testimonials";
 import Footer from "pages/LandingPages/Author/sections/Footer";
+import Comentario from "pages/Presentation/sections/Comentario";
 
 // Routes
 import routes from "routes";
@@ -49,6 +50,7 @@ function AboutUs() {
         <ClasesMatematicas />
         <Posts />
         <Testimonials />
+        <Comentario />
         <Contact />
         <Footer />
       </MKBox>

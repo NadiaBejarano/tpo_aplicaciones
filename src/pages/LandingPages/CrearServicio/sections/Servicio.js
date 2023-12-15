@@ -53,7 +53,7 @@ function FormSimple() {
                     sx={{ cursor: "pointer", userSelect: "none" }}
                     onClick={handleChecked}
                   >
-                    &nbsp;&nbsp;Acepto&nbsp;
+                    &nbsp;&nbsp;&nbsp;
                   </MKTypography>
                   <MKTypography
                     component="a"
@@ -62,7 +62,7 @@ function FormSimple() {
                     fontWeight="regular"
                     color="dark"
                   >
-                    Terminos y Condiciones
+                    Publicar servicio
                   </MKTypography>
                 </Grid>
               </Grid>
