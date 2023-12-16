@@ -13,11 +13,10 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// import { useState } from "react";
+import { useState } from "react";
 
 // react-router-dom components
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 // @mui material components
 import Card from "@mui/material/Card";
 // import Switch from "@mui/material/Switch";
@@ -43,6 +42,10 @@ import api from "api/api";
 import educacion3 from "assets/images/examples/educacion3.jpeg";
 
 function SignInBasic() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
   const handleForget = async () => {
     try {
       const email = "patricianazame@gmail.com"; // Puedes obtener el email de tu estado o de algún otro lugar
@@ -77,10 +80,14 @@ function SignInBasic() {
     console.log("Se hizo clic en el botón");
 
     try {
-      const data = await api.login("patricianazame@gmail.com", "654321");
+      // const data = await api.login("patricianazame@gmail.com", "654321");
+      const data = await api.login(email, password);
       console.log("Respuesta del servidor:", data);
       // Almacenar el token en localStorage
       localStorage.setItem("token", data.token);
+
+      // Redirigir a la pantalla después del inicio de sesión exitoso
+      navigate("/pages/landing-pages/vista-profesor"); // Ajusta la ruta según tu aplicación
     } catch (error) {
       console.error("Error:", error.message);
       // Manejo de errores
@@ -157,10 +164,22 @@ function SignInBasic() {
               <MKBox pt={4} pb={3} px={3}>
                 <MKBox component="form" role="form">
                   <MKBox mb={2}>
-                    <MKInput type="email" label="Email" fullWidth />
+                    <MKInput
+                      type="email"
+                      label="Email"
+                      fullWidth
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
                   </MKBox>
                   <MKBox mb={2}>
-                    <MKInput type="password" label="Contraseña" fullWidth />
+                    <MKInput
+                      type="password"
+                      label="Contraseña"
+                      fullWidth
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
                   </MKBox>
                   <MKBox mt={4} mb={1}>
                     <MKButton variant="gradient" color="info" fullWidth onClick={handleLogin}>
