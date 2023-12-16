@@ -38,6 +38,7 @@ function DropdownAndDropup() {
               Estado <Icon sx={dropdownIconStyles}>expand_more</Icon>
             </MKButton>
             <Menu anchorEl={dropdown} open={Boolean(dropdown)} onClose={closeDropdown}>
+              <MenuItem onClick={closeDropdown}>Solicitada</MenuItem>
               <MenuItem onClick={closeDropdown}>Aceptada</MenuItem>
               <MenuItem onClick={closeDropdown}>Finalizada</MenuItem>
               <MenuItem onClick={closeDropdown}>Cancelada</MenuItem>

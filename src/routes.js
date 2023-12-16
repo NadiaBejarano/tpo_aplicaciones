@@ -25,6 +25,7 @@ import MensajeDeError from "pages/LandingPages/MensajeDeError";
 import Vista from "pages/LandingPages/VistaProfesor";
 import Mensaje from "pages/LandingPages/CambioDeEstado";
 import Opinion from "pages/LandingPages/Opiniones";
+import CambiarContrasenia from "pages/LandingPages/CambiarContrasenia";
 const routes = [
   {
     name: "Búsqueda",
@@ -221,6 +222,11 @@ const routes = [
         name: "Opinion",
         route: "/pages/landing-pages/opinion",
         component: <Opinion />,
+      },
+      {
+        name: "Cambiar contraseña",
+        route: "/pages/landing-pages/cambiar-contrasenia",
+        component: <CambiarContrasenia />,
       },
     ],
   },
