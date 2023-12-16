@@ -28,7 +28,8 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // Presentation page sections
-import Information from "pages/Presentation/sections/Information";
+//import Information from "pages/Presentation/sections/Information";
+import Servicios from "./sections/Servicios";
 
 // Presentation page component
 
@@ -101,7 +102,7 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <Information />
+        <Servicios />
         <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>

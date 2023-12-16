@@ -1,6 +1,5 @@
 // @mui material components
 import Icon from "@mui/material/Icon";
-
 // @mui icons
 
 // Pages
@@ -28,8 +27,12 @@ import Opinion from "pages/LandingPages/Opiniones";
 import CambiarContrasenia from "pages/LandingPages/CambiarContrasenia";
 const routes = [
   {
-    name: "Búsqueda",
+    name: "Busqueda",
     icon: <Icon>search</Icon>,
+  },
+  {
+    name: "Clases",
+    icon: <Icon>book</Icon>,
     collapse: [
       {
         name: "Clases Grupales",
