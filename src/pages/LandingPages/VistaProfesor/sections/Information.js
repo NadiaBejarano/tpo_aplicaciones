@@ -33,6 +33,52 @@ function Information() {
       <Container>
         <Grid container item xs={12} lg={6}>
           <MKTypography variant="h3" mb={6}>
+            Servicios
+          </MKTypography>
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6} lg={3}>
+            <TransparentBlogCard
+              image={post1}
+              title="Clase uno"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus."
+              action={{
+                type: "internal",
+                route: "",
+                color: "info",
+                label: "Ver",
+              }}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} lg={3}>
+            <TransparentBlogCard
+              image={post1}
+              title="Clase dos"
+              description="Semanal: Un encuentro por semana. Dias Martes, Jueves. Duración: 60 minutos"
+              action={{
+                type: "internal",
+                route: "",
+                color: "info",
+                label: "ver",
+              }}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} lg={3}>
+            <TransparentBlogCard
+              image={post1}
+              title="Clase tres"
+              description="Cuota mensual: $10.000 ARS. Formas de pago: Tarjeta de credito, Transferencia Bancaria"
+              action={{
+                type: "internal",
+                route: "",
+                color: "info",
+                label: "Leer",
+              }}
+            />
+          </Grid>
+        </Grid>
+        <Grid container item xs={12} lg={6}>
+          <MKTypography variant="h3" mb={6}>
             Contrataciones
           </MKTypography>
         </Grid>
