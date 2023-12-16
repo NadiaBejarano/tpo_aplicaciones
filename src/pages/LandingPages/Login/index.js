@@ -77,40 +77,36 @@ function SignInBasic() {
   };
 
   const handleLogin = async () => {
-    console.log("Se hizo clic en el botón");
-
     try {
-      // const data = await api.login("patricianazame@gmail.com", "654321");
       const data = await api.login(email, password);
-      console.log("Respuesta del servidor:", data);
-      // Almacenar el token en localStorage
       localStorage.setItem("token", data.token);
 
-      // Redirigir a la pantalla después del inicio de sesión exitoso
-      navigate("/pages/landing-pages/vista-profesor"); // Ajusta la ruta según tu aplicación
+      navigate("/pages/landing-pages/vista-profesor");
     } catch (error) {
       console.error("Error:", error.message);
       // Manejo de errores
     }
   };
   const handleRegister = async () => {
-    try {
-      const usuarioData = {
-        email: "patricianazame2@gmail.com",
-        password: "123456",
-        nombre: "Patricia",
-        apellido: "Azame",
-        titulo: "Profesora de Cocina",
-      };
+    console.log("Register--------------------------------");
+    navigate("/pages/landing-pages/crear-cuenta");
+    // try {
+    //   const usuarioData = {
+    //     email: "patricianazame2@gmail.com",
+    //     password: "123456",
+    //     nombre: "Patricia",
+    //     apellido: "Azame",
+    //     titulo: "Profesora de Cocina",
+    //   };
 
-      const data = await api.registrarUsuario(usuarioData);
+    //   const data = await api.registrarUsuario(usuarioData);
 
-      // Lógica después de una solicitud exitosa
-      console.log("Respuesta del servidor para registro de usuario:", data);
-    } catch (error) {
-      // Manejo de errores
-      console.error("Error al registrar usuario:", error.message);
-    }
+    //   // Lógica después de una solicitud exitosa
+    //   console.log("Respuesta del servidor para registro de usuario:", data);
+    // } catch (error) {
+    //   // Manejo de errores
+    //   console.error("Error al registrar usuario:", error.message);
+    // }
   };
 
   return (
@@ -230,7 +226,7 @@ function SignInBasic() {
                         textGradient
                         onClick={handleRegister}
                       >
-                        Crear cuenta Default
+                        Registrarse
                       </MKTypography>
                     </MKTypography>
                   </MKBox>

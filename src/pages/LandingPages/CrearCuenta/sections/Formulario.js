@@ -1,9 +1,12 @@
-import { useState } from "react";
+// import { useState } from "react";
+import api from "api/api";
+
+// react-router-dom components
+// import { useNavigate } from "react-router-dom";
 
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Switch from "@mui/material/Switch";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -12,10 +15,27 @@ import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
 function Form() {
-  const [checked, setChecked] = useState(true);
+  const handleRegister = async () => {
+    console.log("Register--------------------------------");
+    try {
+      const usuarioData = {
+        email: "patricianazame2@gmail.com",
+        password: "123456",
+        nombre: "Patricia",
+        apellido: "Azame",
+        titulo: "Profesora de Cocina",
+      };
 
-  const handleChecked = () => setChecked(!checked);
+      const data = await api.registrarUsuario(usuarioData);
+      // navigate("");
 
+      // Lógica después de una solicitud exitosa
+      console.log("Respuesta del servidor para registro de usuario:", data);
+    } catch (error) {
+      // Manejo de errores
+      console.error("Error al registrar usuario:", error.message);
+    }
+  };
   return (
     <MKBox component="section" py={12}>
       <Container>
@@ -52,31 +72,15 @@ function Form() {
                 <Grid item xs={12}>
                   <MKInput variant="standard" label="Experiencia" multiline fullWidth rows={6} />
                 </Grid>
-                <Grid item xs={12} alignItems="center" ml={-1}>
-                  <Switch checked={checked} onChange={handleChecked} />
-                  <MKTypography
-                    variant="button"
-                    fontWeight="regular"
-                    color="text"
-                    ml={-1}
-                    sx={{ cursor: "pointer", userSelect: "none" }}
-                    onClick={handleChecked}
-                  >
-                    &nbsp;&nbsp;Acepto&nbsp;
-                  </MKTypography>
-                  <MKTypography
-                    component="a"
-                    href="#"
-                    variant="button"
-                    fontWeight="regular"
-                    color="dark"
-                  >
-                    Términos and Condiciones
-                  </MKTypography>
-                </Grid>
               </Grid>
               <Grid container item justifyContent="center" xs={12} my={2}>
-                <MKButton type="submit" variant="gradient" color="dark" fullWidth>
+                <MKButton
+                  type="submit"
+                  variant="gradient"
+                  color="dark"
+                  fullWidth
+                  onClick={handleRegister}
+                >
                   Enviar
                 </MKButton>
               </Grid>

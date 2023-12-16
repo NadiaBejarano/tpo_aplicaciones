@@ -10,7 +10,6 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 import Formulario from "./sections/Formulario";
 import Footer from "./sections/Footer";
-
 // Routes
 import routes from "routes";
 
